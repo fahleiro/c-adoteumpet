@@ -16,21 +16,5 @@ CREATE TABLE t_usuarios (
     bairro VARCHAR(100),
     rua VARCHAR(200),
     numero_rua VARCHAR(10),
-    complemento VARCHAR(200),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    complemento VARCHAR(200)
 );
-
--- Trigger para atualizar o updated_at
-CREATE OR REPLACE FUNCTION update_updated_at_column()
-RETURNS TRIGGER AS $$
-BEGIN
-    NEW.updated_at = CURRENT_TIMESTAMP;
-    RETURN NEW;
-END;
-$$ language 'plpgsql';
-
-CREATE TRIGGER update_t_usuarios_updated_at
-    BEFORE UPDATE ON t_usuarios
-    FOR EACH ROW
-    EXECUTE FUNCTION update_updated_at_column(); 

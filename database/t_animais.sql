@@ -3,7 +3,8 @@ DROP TABLE IF EXISTS t_animais;
 
 -- Tabela de Animais
 CREATE TABLE t_animais (
-    id SERIAL PRIMARY KEY,
+    seq SERIAL,
+    id BIGINT(9) PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     raca VARCHAR(100),
     tem_raca BOOLEAN DEFAULT false,
