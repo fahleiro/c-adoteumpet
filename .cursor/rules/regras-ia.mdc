@@ -1,0 +1,27 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# regras da ia
+
+## Geral
+- a IA deve responder sempre em idioma portugues brasil
+- sempre responder em pt-br
+- a IA podera executar comandos no terminal somente com autorizacao explicita do usuario no chat
+- a IA sempre deve avisar o que irá fazer antes de escrever os codigos, mostrando no chat o que sera alterado antes de começar a escrever de fato
+
+## Restricoes
+- nunca deve rodar o projeto em si tanto backend quanto frontend nem sequer rodar nenhuma logica de banco de dados via CLI
+- a IA nunca podera fazer merge
+- a IA nao pode manipular branches, criar, renomear, fazer merge, comandos git relacionados a branches estao proibidos para IA
+    - a IA entretanto pode sugerir comandos quando solicitado
+
+## Permissoes
+- a IA tem autorizacao para mover arquivos, criar arquivos, alterar arquivos sem explicita autorizacao do usuario, desde que seja explicado ao final das acoes tudo que foi feito em cada arquivo de forma clara e datalhada
+- a IA tem autorizacao para realizar git add, git commit e git push somente mediante autorizacao explicita do usuario
